@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Race</title>
+	<style type="text/css">
+		body{
+			background:url("stealth.png");
+		}
+
+		#title{
+             margin-left: 500px;
+		}
+		#character1{
+			margin-left: 10px;
+		}
+		#character2{
+              margin-left: 10px;
+		}
+		#character3{
+			margin-left: 10px;
+		}
+
+
+
+		
+
+
+
+	</style>
+</head>
+<body>
+	
+	<img id="title" src="title.png" alt="title" width="500" height="500" align= "center" style="none"><br>
+	
+	<div id = "characters">
+	<img id= "character1" src="sonic.gif" alt="sonic" width="200" height="200"><br><br>
+	<img id ="character2" src="eggman.gif" alt="eggman" width="175" height="175"><br><br>
+	<img id= "character3"src="knuckles.gif-c200" width="200" height="200" alt="knuckles">
+</div>
+<script type="text/javascript">
+	let title = document.getElementById("title")
+	let none = document.getElementById("characters").style.display = "none"
+	let p1 = document.querySelector("character1")
+	let p2 = document.querySelector("character3")
+    let pos1 = 10
+    let pos2 = 10
+    
+	document.addEventListener("click",function () {
+	      document.getElementById("characters").style.display ="block"
+	      title.style.display = "none"
+	})
+
+	document.addEventListener("keydown",function(event){
+		if(event.keyCode == 32){
+
+			let p1 = document.getElementById("character1")
+			pos1 += 15
+		    console.log(pos2)
+			p1.style.marginLeft = pos1 + "px"
+			if (pos1 >= 1200) {
+				alert("Sanic WIN!!")
+			}
+	}})
+
+
+	
+	document.addEventListener("keydown",function(event){
+		if(event.keyCode == 75){
+
+			let p2 = document.getElementById("character3")
+			pos2 += 15
+			console.log(pos2)
+			p2.style.marginLeft = pos2 + "px"
+			if (pos2 >= 1200) {
+				alert("Knuckles WIN!!!")
+			}
+	}})
+
+
+
+
+
+	
+	 
+
+	
+</script>
+</body>
+</html>
